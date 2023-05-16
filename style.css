@@ -1,0 +1,272 @@
+*{
+    /* aqui definimos a pagina com margem zero, o * azul antes da chaveta significa todo documento*/
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+
+
+}
+
+body{
+    /*AQUI DEFINIMOS A FONTE DO CORPO DA PAG*/
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    /*aqui criamos uma barra de navegacao no topo da pagina*/
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding:0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+
+}  
+.logo-container{
+    flex: 2;
+    
+}
+.logo{
+   
+    font-size: 30px;
+    color: rgb(42, 112, 181);
+}
+.menu-container{
+    flex: 6;
+}
+.menu-list {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+}
+
+
+.menu-list-item{
+    margin-right: 30px;
+}
+.menu-list-item:hover{
+    margin-right: 30px;
+    color: rgb(255, 255, 255, .7);
+}
+.menu-list-item.active{
+    font-weight: bold;
+}
+.profile-container{
+    flex: 1;
+
+}
+
+.toggle{
+   width: 40px;
+   height: 20px;
+   background-color: white; 
+   border-radius: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   position: relative;
+}
+.toggle-icon{
+  color: gold;  
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 60%;
+    cursor: pointer;
+
+}
+
+.sidebar{
+    /*aqui criamos uma bara de navegacao na lateral esquerda da pagina. o position fixed e para a barra mater-se na tela quando scrollarmos*/
+    width: 50px;
+    height: 100%;
+    background-color: none;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 60px; 
+
+}
+
+/*.left-menu-icon{
+   color: white;
+   font-size: 20px;
+ 
+}*/
+
+.container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgb(2, 3, 7, 0.4);
+    min-height: 640px;
+} 
+.container img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+.container img.active{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.container.active{
+    background-color: white;
+}
+
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+ .toggle.active{
+    background-color: black;
+ }
+
+ .toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+ }
+
+ .conatiner{
+    width: 100%;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgb(2, 3, 7, 0.4);
+    
+} 
+.conatiner img{
+    position: absolute;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.casa-text{
+    z-index: 1000;
+    padding: 0 50px;
+}
+.casa-text span{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.casa-text h1{
+
+    font-weight:700 ;
+    margin-bottom: 1rem;
+}
+
+.heading{
+    max-width: 968px;
+    margin-left: 2%;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+
+}
+img{
+    cursor: pointer;
+}
+
+.casa{
+    background: #f9f9f9;
+    padding-left: 10%;
+    padding-right: 2%;
+    border-radius: 20px;
+
+}
+
+.banner{
+    width: 100%;
+    
+    
+}
+.banner img{
+    width: 100%;
+    height: 940px;
+}
+.lista-conteudo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+
+}
+.vid-list .thumbnail{
+    width: 100%;
+    border-radius: 5%;
+
+}
+.vid-list .flex-div{
+    align-items: flex-start;
+    margin-top: 7px;
+
+}
+.vid-info{
+    color: #5a5a5a;
+    font-size: 13px;
+}
+.vid-info a{
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+/*-------------pagina de reproducao--------------*/
+.play{
+   padding-left: 2%;  
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.play-video{
+    flex-basis: 58%;
+}
+.play-video video{
+    width: 100%;
+}
+.live-content{
+    width: 100%;
+}
+.live-content img{
+    width: 100%;
+}
+
+ 
+ @media only screen and (max-width: 940px){
+    .menu-container{
+        display: none;
+    }
+ }
